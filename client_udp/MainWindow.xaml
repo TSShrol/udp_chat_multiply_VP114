@@ -1,0 +1,23 @@
+﻿<Window x:Class="client_udp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:client_udp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="joinItem" Header="Join" Click="joinItem_Click"></MenuItem>
+            <MenuItem x:Name="quitItem" Header="Quit" Click="quitItem_Click"></MenuItem>
+        </Menu>
+        <DockPanel Margin="5,0,5,5" DockPanel.Dock="Bottom">
+            <Label Content="Message: " DockPanel.Dock="Left"></Label>
+            <Button x:Name="sendBtn" Margin="5" Padding="5,0" DockPanel.Dock="Right" Click="sendBtn_Click">Send</Button>
+            <TextBox x:Name="msgTextBox" VerticalAlignment="Center">Hello! How are you?</TextBox>
+        </DockPanel>
+        <TextBlock Text="Chat:" DockPanel.Dock="Top" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+        <ListBox x:Name="chatList"></ListBox>
+        
+    </DockPanel>
+</Window>
